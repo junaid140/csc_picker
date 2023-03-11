@@ -52,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 ///Adding CSC Picker Widget in app
                 CSCPicker(
+
                   currentCountry: "Pakistan",
                   currentState: "Punjab",
                   currentCity: "Multan",
@@ -93,9 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   ///Country Filter [OPTIONAL PARAMETER]
                   countryFilter: [
+                    CscCountry.Pakistan,
                     CscCountry.India,
                     CscCountry.United_States,
-                    CscCountry.Canada
+                    CscCountry.Canada,
                   ],
 
                   ///Disable country dropdown (Note: use it with default country)

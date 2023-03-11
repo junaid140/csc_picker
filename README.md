@@ -140,8 +140,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ///And its only work when (flagState : CountryFlag.DISABLE ||  CountryFlag.SHOW_IN_DROP_DOWN_ONLY
                   ///If flagState : CountryFlag.ENABLE then will not Work
                   
+                  ///[OPTIONAL PARAMETER]
                   currentCountry: "Pakistan",
+                  ///[OPTIONAL PARAMETER]
                   currentState: "Punjab",
+                  ///[OPTIONAL PARAMETER]
                   currentCity: "Multan",
                   ///Dropdown box decoration to style your dropdown selector [OPTIONAL PARAMETER] (USE with disabledDropdownDecoration)
                   dropdownDecoration: BoxDecoration(
