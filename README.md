@@ -44,6 +44,9 @@ you will get feedback in onChanged functions
 <thead>
 <td><b>Parameters</b></td><td><b>Type</b></td><td><b>Description</b></td></thead>
 <tr><td>flagState</td><td>CountryFlag</td><td>Enable (get flag with country name) / Disable (Disable flag) / ShowInDropdownOnly (display flag in dropdown only)</td></tr>
+<tr><td>currentCountry</td><td>String</td><td>Optional, Enter Country Name for auto select</td></tr>
+<tr><td>currentState</td><td>String</td><td>Optional, Enter State Name for auto select</td></tr>
+<tr><td>currentCity</td><td>String</td><td>Optional, Enter City Name for auto select</td></tr>
 <tr><td>layout</td><td>Layout</td><td>Toggle dropdown layout (Horizontal / Vertical)</td></tr>
 <tr><td>showStates</td><td>Boolean</td><td> Enable disable States dropdown (true / false)</td></tr>
 <tr><td>showCities</td><td>Boolean</td><td> Enable disable Cities dropdown (true / false)</td></tr>
