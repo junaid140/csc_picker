@@ -535,6 +535,7 @@ class CSCPicker extends StatefulWidget {
     this.showStates = true,
     this.showCities = true,
     this.defaultCountry,
+    this.spaceBetween = 20.0,
     this.currentCountry,
     this.currentState,
     this.currentCity,
@@ -565,6 +566,7 @@ class CSCPicker extends StatefulWidget {
   final CountryFlag flagState;
   final Layout layout;
   final double? searchBarRadius;
+  final double? spaceBetween;
   final double? dropdownDialogRadius;
 
   final CscCountry? defaultCountry;
@@ -643,7 +645,7 @@ class CSCPickerState extends State<CSCPicker> {
     if (_countryFilter.isNotEmpty) {
       _countryFilter.forEach((element) {
         var result = countries[Countries[element]!];
-        if(result!=null) addCountryToList(result);
+        if (result != null) addCountryToList(result);
       });
     } else {
       countries.forEach((data) {
@@ -661,8 +663,7 @@ class CSCPickerState extends State<CSCPicker> {
     model.emoji = data['emoji'];
     if (!mounted) return;
     setState(() {
-      widget.flagState == CountryFlag.ENABLE
-          ||
+      widget.flagState == CountryFlag.ENABLE ||
               widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY
           ? _country.add(model.emoji! +
               "    " +
@@ -807,11 +808,11 @@ class CSCPickerState extends State<CSCPicker> {
                 children: <Widget>[
                   countryDropdown(),
                   SizedBox(
-                    height: 10.0,
+                    height: widget.spaceBetween,
                   ),
                   stateDropdown(),
                   SizedBox(
-                    height: 10.0,
+                    height: widget.spaceBetween,
                   ),
                   cityDropdown()
                 ],
@@ -824,7 +825,7 @@ class CSCPickerState extends State<CSCPicker> {
                       Expanded(child: countryDropdown()),
                       widget.showStates
                           ? SizedBox(
-                              width: 10.0,
+                              width: widget.spaceBetween,
                             )
                           : Container(),
                       widget.showStates
@@ -833,7 +834,7 @@ class CSCPickerState extends State<CSCPicker> {
                     ],
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: widget.spaceBetween,
                   ),
                   widget.showStates && widget.showCities
                       ? cityDropdown()
